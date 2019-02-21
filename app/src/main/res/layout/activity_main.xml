@@ -6,13 +6,66 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <FrameLayout
+        android:id="@+id/contentFl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/homepage_content_bg">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/tabsLl"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/homepage_tab_bg"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/forumTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="论坛"
+            android:textSize="16sp"
+            android:textColor="@color/homepage_tab_text_select_color"/>
+        <TextView
+            android:id="@+id/videoTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="视频"
+            android:textSize="16sp"
+            android:textColor="@color/homepage_tab_text_unselect_color"/>
+        <TextView
+            android:id="@+id/dataTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="资料库"
+            android:textSize="16sp"
+            android:textColor="@color/homepage_tab_text_unselect_color"/>
+        <TextView
+            android:id="@+id/myTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="我的"
+            android:textSize="16sp"
+            android:textColor="@color/homepage_tab_text_unselect_color"/>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
